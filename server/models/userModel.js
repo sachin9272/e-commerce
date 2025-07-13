@@ -12,6 +12,8 @@ const userSchema = new mongoose.Schema({
   referralCode: String,
   levelPercentages: [Number], // Optional: percentage of earning per level
   createdAt: { type: Date, default: Date.now },
+  passwordResetToken:{type: String},
+  passwordResetExpiry:{type: Date}
 });
 
 export default mongoose.model('User', userSchema);
